@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Sign Up</title>
+    <link rel="icon" href="image/logo.png"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    body{
+        background: linear-gradient(to left,yellow, orange,red);
+    }
+    #sign_up{
+        display: flex;
+        width: max-content;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .logo img{
+        width: 100px;
+        margin: 20px;
+    }
+    .image{
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        overflow: hidden;
+        box-shadow: 0 0 2rem black;
+    }
+    .image img{
+        width: 140%;
+        height: 100%;
+        margin-left: -200px;
+    }
+    #box{
+        position: relative;
+        text-align: center;
+        background-color: white;
+        margin: 25px;
+        margin-left: 450px;
+        z-index: 2;
+        width: 500px;
+        height: 450px;
+        box-shadow: 0 0 2rem black;
+    }
+    i:hover{
+        transform: scale(1.1);
+        transition: transform 1s;
+    }
+    button{
+        cursor: pointer;
+    }
+    input{
+        width: 80%;
+        outline: none;
+        border: none;
+        color: black;
+        padding-left: 15px;
+        border-bottom: 2px solid black;
+        height: 20px;
+        margin: 5px;
+    }
+    button{
+        font-size: 20px;
+        width: 80%;
+        color: white;
+        height: 40px;
+        background-color: black;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+    i{
+        cursor: pointer;
+        margin-top: 5px;
+        position: absolute;
+    }
+    ::placeholder{
+        color: black;
+    }
+    #login_box{
+        margin: 25px;
+        margin-left: -400px;
+        text-align: center;
+        background-color: white;
+        z-index: 5;
+        width: 500px;
+        height: 300px;
+        position: relative;
+        box-shadow: 0 0 2rem black;
+    }
+    
+    .image1{
+        z-index: 1;
+        position: absolute;
+        width: 600px;
+        height: 350px;
+        overflow: hidden;
+        box-shadow: 0 0 2rem black;
+    }
+    .image1 img{
+        width: 140%;
+        height: 100%;
+        margin-left: -50px;
+    }
+    #log_in{
+        display: flex;
+        width: max-content;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .social i{
+        margin: 5px;
+        position: relative;
+        font-size: 30px;
+        padding: 3px;
+        color: white;
+        border-radius: 50% ;
+    }
+</style>
+<body>
+    <div class="logo">
+        <img src="image/logo.png">
+    </div>
+        <div id="sign_up">
+            <div class="image" id="img">
+                <img src="https://www.thedailymeal.com/img/gallery/14-underated-cheeses-you-need-to-try-on-pizza/intro-1677441572.jpg" alt="">
+            </div>
+            <div id="box">
+                <h1>Sign up</h1>
+                <i class='bx bxs-user'></i><input type="text" placeholder="First Name"><br>
+                <i class='bx bxs-user'></i><input type="text" placeholder="Last Name"><br>
+                <input type="email" placeholder="Email"><br>
+                <i class='bx bxs-lock-open' style="display: none;" id="unlock"></i><i class='bx bxs-lock'id="lock" ></i><input type="password" placeholder="Password" id="pass"><i class='bx bxs-show' onclick="show()" id="eye"></i><i class='bx bxs-hide' style="display: none;" onclick="hide()" id="hide"></i>
+                <div class="log" style="display: flex; width: max-content; margin: auto;">
+                    <h3>Already a member?</h3><h3 style="cursor: pointer;" onclick="login()"><b>Log In</b></h3>
+                </div>
+                <a href="index.html"><button>Sign up</button></a>
+                <h5>Or Sign Up Using</h5>
+            <div class="social">
+                <i class='bx bxl-facebook' style="background-color: rgb(44, 44, 154)"></i>
+                <i class='bx bxl-twitter' style="background-color: rgb(43, 43, 251);;"></i>
+                <i class='bx bxl-google' style="background-color: rgb(255, 111, 0);"></i>
+            </div>
+            </div>
+            
+        </div>
+    <div id="log_in" style="display: none;">
+        <div class="image1">
+            <img src="https://www.thedailymeal.com/img/gallery/the-5-best-ways-to-reheat-leftover-pizza/0_Intro_4_pizza_stone_BeautyStockPhoto-Shutterstock.jpg" alt="">
+        </div>
+        <div id="login_box">
+            <h1>Log in</h1>
+            <i class='bx bxs-user'></i><input type="text" placeholder="Username"><br>
+            <i class='bx bxs-lock-open' style="display: none;" id="unlock1"></i><i class='bx bxs-lock'id="lock1" ></i><input type="password" placeholder="Password" id="pass1"><i class='bx bxs-show' onclick="show1()" id="eye1"></i><i class='bx bxs-hide' style="display: none;" onclick="hide1()" id="hide1"></i>
+            <h4 style="text-align: right; margin-right: 35px;">Forgot password?</h4>
+            <a href="index.html"><button>Log in</button></a>
+            <div class="sign" style="display: flex; width: max-content; margin: auto;">
+                <h3> Not a member?</h5>
+                <h3 style="cursor: pointer;" onclick="signup()"><b>Sign Up</b></h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function show(){
+            document.getElementById("eye").style.display="none";
+            document.getElementById("hide").style.display="inline";
+            document.getElementById("unlock").style.display="inline";
+            document.getElementById("lock").style.display="none";
+            document.getElementById("pass").type = "text";
+        }
+        function hide(){
+            document.getElementById("eye").style.display="inline";
+            document.getElementById("hide").style.display="none";
+            document.getElementById("unlock").style.display="none";
+            document.getElementById("lock").style.display="inline";
+            document.getElementById("pass").type = "password";
+        }
+        function show1(){
+            document.getElementById("eye1").style.display="none";
+            document.getElementById("hide1").style.display="inline";
+            document.getElementById("unlock1").style.display="inline";
+            document.getElementById("lock1").style.display="none";
+            document.getElementById("pass1").type = "text";
+        }
+        function hide1(){
+            document.getElementById("eye1").style.display="inline";
+            document.getElementById("hide1").style.display="none";
+            document.getElementById("unlock1").style.display="none";
+            document.getElementById("lock1").style.display="inline";
+            document.getElementById("pass1").type = "password";
+        }
+        function login(){
+            document.getElementById("title").innerHTML="Log In";
+           document.getElementById("sign_up").style.display="none";
+           document.getElementById("log_in").style.display="inline";
+        }
+        function signup(){
+            document.getElementById("title").innerHTML="Sign Up";
+            document.getElementById("sign_up").style.display="inline";
+           document.getElementById("log_in").style.display="none";
+        }
+    </script>
+    
+</body>
+</html>

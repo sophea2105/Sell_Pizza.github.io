@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="icon" href="image/logo.png"/>
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    .food img{
+    width: 400px;
+}
+.add_piz{
+    display: flex;
+    width: max-content;
+    margin: auto;
+}
+#pay{
+    height: 100vh;
+    background-image: url("https://media.istockphoto.com/id/1412198876/vector/ingredients-pizza-thin-line-seamless-pattern-background-vector.jpg?s=612x612&w=0&k=20&c=7GO0fHbK_t1Hy03sLHkBX1uqLrUfHQRq0H-qlNij6Uk=");
+}
+#buying{
+    
+    display: flex;
+  
+}
+#buying i{
+    color: black;
+    font-size: 30px;
+}
+.list img{
+    width: 130px;
+}
+
+.num_box{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+}
+</style>
+<body onload="loading()"> 
+    <div id="pizza_shop">
+        <div id="shop" >
+            <section class="home_section">
+                <div class="box"></div>
+                <!-- <div class="home_text">
+                    <h1>Delevery</h1>
+                    <h1>We Care About Our</h1>
+                    <h1>Customer!</h1>
+                </div> -->
+                <img class="pic" src="image/big_pizza.png">
+                <div class="logo">
+                    <img class="logo" src="image/logo.png">
+                </div>
+                <marquee direction="right"><img src="image/delevery.png"></marquee>
+                <hr>
+                <div class="navbar">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#top"><i class='bx bxs-home'></i>Home</a></li>
+                            <li><a href="#menu">Menu<i class='bx bx-chevron-down'></i></a></li>
+                            <li><a href="#foot">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="search">
+                            <input type="text" placeholder="search.." id="search"><i class='bx bx-search' onclick="search_bt()" ></i>
+                        </div>
+                        <div class="account">
+                            <a href="sign_in.html"><i class='bx bxs-user'></i></a>
+                        </div>
+                    </div>
+                    <div class="order">
+                       <a href="#menu"> <h1><i class='bx bxs-cart'></i>Order Now</h1></a>
+                    </div>
+                </div>
+            </section>
+            <section class="section_body">
+                <div class="show_food">
+                    <div class="box2" id="box">
+                        <img src="https://www.thespruceeats.com/thmb/lmDJraajDXMJ9izsIfzNt79GrSs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Pizzasupremehoriz-1ccfa0b1732b4c128427d19ae02a422b.jpg">
+                        <div class="show_text">
+                            <h2  style="color: white;">Supreme Pizza</h2><br><br>
+                            <h1 style="font-size: 40px;">Healthy <br> Pizza</h1>
+                            <div class="buy1">Order Now</div>
+                        </div>
+                    </div>
+                    <div class="box1" id="box">
+                        <img src="https://static.toiimg.com/thumb/53110049.cms?width=1200&height=900">
+                        <div class="show_text">
+                            <h2  style="color: white;">Cheese Pizza</h2><br><br>
+                            <h1 style="font-size: 40px;">Delecious <br> Pizza</h1>
+                            <div class="buy1">Order Now</div>
+                        </div>
+                    </div>
+                    <div class="box3" id="box">
+                        <img src="https://demothemedh.b-cdn.net/piizalian/wp-content/uploads/2021/03/h2_banner-3.png">
+                        <div class="show_text">
+                            <h2 style="color: white;">Aleppo Pepper Pizza</h2><br><br>
+                            <h1 style="font-size: 40px;">Only in<br> Local</h1>
+                            <div class="buy1">Order Now</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="aa">
+    
+                    <div class="boxs1" id="boxs">
+                        <div class="a">
+                            <img src="image/pic1.png">
+                        </div>
+                        <div class="b" >
+                            <h1>Free Shipping</h1>
+                            <h2>Sign up for updates and get free shipping</h2>
+                        </div>
+                    </div>
+                    <div class="boxs2" id="boxs">
+                        <div class="a">
+                            <img src="image/pic2.png">
+                        </div>
+                        <div class="b">
+                            <h1>30 Minutes Delivery</h1>
+                            <h2>Everything you oder will be quickly <br> delivered to your door</h2>
+                        </div>
+                    </div>
+                    <div class="boxs3" id="boxs">
+                        <div class="a">
+                            <img src="image/pic3.png">
+                        </div>
+                        <div class="b">
+                            <h1>Best Quality Guarantee</h1>
+                            <h2>Pizza is an international chain of family <br> restaurants</h2>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+            <a id="menu"></a>
+            <hr style="border: 2px solid black;" >
+            <section class="section3">
+                <h1>Our Delicious Foods</h1>
+                <div class="food_menu">
+                    <div class="first">
+                        <div class="pizza">
+                            <img src="image/pizza/pizza1.png">
+                            <h2>Pepperoni Pizza</h2>
+                            <h2 class="price">$10</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz1()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza2.png">
+                            <h2>Chicken BBQ Pizza</h2>
+                            <h2 class="price">$15.99</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz2()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza3.png">
+                            <h2>Cheese Pizza</h2>
+                            <h2 class="price">$17.81</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz3()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza4.png">
+                            <h2>Mellow Mushroom Pizza</h2>
+                            <h2 class="price">$24.99</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz4()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="first">
+                        <div class="pizza">
+                            <img src="image/pizza/pizza5.png">
+                            <h2>Vegetarina Pizza</h2>
+                            <h2 class="price">$8.12</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz5()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza6.png">
+                            <h2>Seafood Pizza</h2>
+                            <h2 class="price">$7.10</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz6()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza7.png">
+                            <h2>Chicken Tikka Pizza</h2>
+                            <h2 class="price">$16</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz7()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza8.png">
+                            <h2>Cheese Sausage Pizza</h2>
+                            <h2 class="price">$18.9</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz8()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="first">
+                        <div class="pizza">
+                            <img src="image/pizza/pizza9.png">
+                            <h2>Hawaiian Pizza</h2>
+                            <h2 class="price">$14.99</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz9()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza10.png">
+                            <h2>Margherita Pizza</h2>
+                            <h2 class="price">$13.34</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz10()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza11.png">
+                            <h2>Mushroom Pizza</h2>
+                            <h2 class="price">$15</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz11()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="pizza">
+                            <img src="image/pizza/pizza12.png">
+                            <h2>Spicy Mexican Pizza</h2>
+                            <h2 class="price">$5.99</h2>
+                            <div class="buyy">
+                                <h2 onclick="piz12()">Buy Now</h2>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                    <h1>Our Drinks</h1>
+                    <div class="drink">
+                        <div class="first">
+                            <div class="pizza">
+                                <img src="image/pizza/drink1.png">
+                                <h2>Coca_Cola</h2>
+                                <h2 class="price">$1.5</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                            <div class="pizza">
+                                <img src="image/pizza/drink2.png">
+                                <h2>Pepsi</h2>
+                                <h2 class="price">$1</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                            <div class="pizza">
+                                <img src="image/pizza/drink3.png">
+                                <h2>Water</h2>
+                                <h2 class="price">$0.5</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                            <div class="pizza">
+                                <img src="image/pizza/drink4.png">
+                                <h2>Fanta</h2>
+                                <h2 class="price">$1</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drink">
+                        <div class="first">
+                            <div class="pizza">
+                                <img src="image/pizza/drink5.png">
+                                <h2>Sting</h2>
+                                <h2 class="price">$1</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                            <div class="pizza">
+                                <img src="image/pizza/drink6.png">
+                                <h2>Sprite</h2>
+                                <h2 class="price">$1</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                            <div class="pizza">
+                                <img src="image/pizza/drink7.png">
+                                <h2>Vigor</h2>
+                                <h2 class="price">$1</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                            <div class="pizza">
+                                <img src="image/pizza/drink8.png">
+                                <h2>Ize</h2>
+                                <h2 class="price">$1</h2>
+                                <div class="buyy">
+                                    <h2>Buy Now</h2>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <div class="design">
+                <div class="abc">
+                    <div class="text">
+                        <h1 style="color: black;">Concept</h1>
+                        <h1 style="color: black; font-size: 50px;">So, What is Pizza?</h1>
+                        <h2 style="margin-left: 0;">Pizza is a dish of Italian origin, consisting of a flat round base of dough <br> baked with a topping of tomatoes and cheese, typically with added <br> meat, fish, or vegetables.</h2>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="image/pizza/pizza1.png">
+                </div>
+            </div>
+            <section class="section4">
+                <div class="pic">
+                    <img src="image/piz.png">
+                </div>
+                <div class="talk">
+                    <h1>WE MADE THE <br> BEST PIZZA IN YOUR TOWN</h1>
+                    <h2>As well known and we are very busy all days advice you. advice you to call us of before arriving, so we can guarantee your seat. advice you to call us of before arriving, so we can</h2>
+                    <div class="advantage">
+                        <div class="a1">
+                            <div>
+                                <img src="image/chef.png">
+                            </div>
+                            <div>
+                                <h3>
+                                    World’s best Chef and Nutritionist!
+                                </h3>
+                            </div>
+                        </div>
+        
+                        <div class="a1">
+                            <div>
+                                <img src="image/ingredient.png">
+                            </div>
+                            <div>
+                                <h3>
+                                    The use of natural best quality products
+                                </h3>
+                            </div>
+                        </div>
+        
+                        <div class="a1">
+                            <div>
+                                <img src="image/time.png">
+                            </div>
+                            <div>
+                                <h3>
+                                    Fastest delivery on your door step
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cooker">
+                <h1>Our Chefs</h1>
+                <div class="chefs">
+                    <div class="chef1">
+                        <img src="https://demothemedh.b-cdn.net/piizalian/wp-content/uploads/2021/03/about_img_4.jpg">
+                        <h2>WILLIAM SMITH</h2>
+                        <div class="social">
+                            <i class='bx bxl-facebook-circle'></i>
+                            <i class='bx bxl-twitter'></i>
+                            <i class='bx bxl-google' ></i>
+                            <i class='bx bxl-youtube' ></i>
+                        </div>
+                    </div>
+                    <div class="chef1">
+                        <img src="https://demothemedh.b-cdn.net/piizalian/wp-content/uploads/2021/03/about_img_5.jpg">
+                        <h2>WILLIAM SMITH</h2>
+                        <div class="social">
+                            <i class='bx bxl-facebook-circle'></i>
+                            <i class='bx bxl-twitter'></i>
+                            <i class='bx bxl-google' ></i>
+                            <i class='bx bxl-youtube' ></i>
+                        </div>
+                    </div>
+                    <div class="chef1">
+                        <img src="https://demothemedh.b-cdn.net/piizalian/wp-content/uploads/2021/03/about_img_6.jpg">
+                        <h2>WILLIAM SMITH</h2>
+                        <div class="social">
+                            <i class='bx bxl-facebook-circle'></i>
+                            <i class='bx bxl-twitter'></i>
+                            <i class='bx bxl-google' ></i>
+                            <i class='bx bxl-youtube' ></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="location">
+                <img src="">
+                
+            </div>
+            <section class="footer" id="foot">
+                <div class="blur">
+                    <div class="left1">
+                        <img src="image/logo.png">
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 0 20px ;">
+                        <div style="width: 300px;">
+                            <div style="display: flex; " >
+                                <img src="image/phone.png" style="width: 30px; height: 30px;">
+                                <h1 style="line-height: 35px;margin-left: 20px;">Tel: xxx xxx xxxx</h1>
+                            </div>
+                            <div style="display: flex; " >
+                            <i class='bx bxs-location-plus' style="font-size: 30px; color: white;"></i>
+                            <h3  style="line-height: 30px;margin-left: 20px; text-align: justify;">Location: #151, National Road No. 3, Sangkat Chom Chao II, Khan Posenchey, Phnom Penh</h3>
+                            </div>
+                            <img src="image/map.png" style="width: 400px;height: 150px;">   
+                        </div>
+                        <div style="width:max-content ">
+                            <h1 style="text-align: center;">Foods</h1>
+                            <h3>+ Pepperoni Pizza</h3>
+                            <h3>+ Chicken BBQ Pizza</h3>
+                            <h3>+ Cheese Pizza</h3>
+                            <h3>+ Mellow Mushroom Pizza</h3>
+                            <h3>+ Vegetarina Pizza</h3>
+                            <h3>+ Seafood Pizza</h3>
+                            <h3>+ Chicken Tikka Pizza</h3>
+                            <h3>+ Cheese Sausage Pizza</h3>
+                        </div>
+                        <div style="width:max-content ">
+                            <h1 style="text-align: center;">Drinks</h1>
+                            <h3>+ Coca-Cola</h3>
+                            <h3>+ Pepsi</h3>
+                            <h3>+ Water</h3>
+                            <h3>+ Fanta</h3>
+                            <h3>+ Sting</h3>
+                            <h3>+ Sprite</h3>
+                            <h3>+ Vigor</h3>
+                            <h3>+ Ize</h3>
+                        </div>
+                    </div>
+                    <hr style="width: 80%;border: 2px solid white; margin-top: 30px;background-color: white;">
+                    <div class="social" style="width: max-content; margin: 0 auto; margin-top: 10px;">
+                        <i class='bx bxl-facebook' style="color: white; border-radius: 50%; padding: 3px; border: 3px solid white; margin: 10px;"></i>
+                        <i class='bx bxl-twitter' style="color: white; border-radius: 50%; padding: 3px; border: 3px solid white;margin: 10px;"></i>
+                        <i class='bx bxl-google' style="color: white; border-radius: 50%; padding: 3px; border: 3px solid white;margin: 10px;"></i>
+                        <i class='bx bxl-instagram-alt' style="color: white; border-radius: 50%; padding: 3px; border: 3px solid white;margin: 10px;"></i>
+                        <div class="copy" style="text-align: center;margin-top: 10px;">
+                            &copy;SREAN Ousophea
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+        <div id="pay" style="display: none;" onload="paying()" >
+            <div style="position: absolute;width: 100%;height: 100%;background-color: rgb(0, 0, 0 ,0.9);"></div>
+            <div id="buying" style="position: fixed;">
+                <a href="index.html"><img src="image/logo.png" style="width: 80px; margin: 20px;"></a>
+                <div class="food" style=" margin-left: -120px; margin-top: 80px;">
+                    <img id="pic_order">
+                    <h1 id="pizza_name" style="text-align: center;width: 400px;"></h1>
+                    <br><br><br>
+                    <div class="add_piz">
+                        <button onclick="minus()"><i class='bx bx-minus'></i></button>
+                        <div class="num_box">
+                            <h1 id="N">1</h1>
+                        </div>
+                        <button onclick="plus()"><i class='bx bx-plus' ></i></button>
+                    </div>
+                </div>
+                <div style="width: 500px; border-left: 3px solid white; border-right: 3px solid white;">
+                    <h1 style="text-align: center;margin: 23px 0; width: 500px;">Drinks</h1>
+                    <div style="display: flex; width: 600px;">
+                        
+                        <div class="add" style=" height: 100vh;width: 250px;position: relative;">
+                            <div id="buy_drink">
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink1.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">1.5$</h2>
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink1()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink1">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink1()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink2.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">1$</h2>
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink2()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink2">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink2()">+</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <br><br>
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink3.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">0.5$</h2>
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink3()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink3">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink3()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink4.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">1$</h2>
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink4()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink4">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink4()">+</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add" style="border-left: 3px solid white; height: 100vh;width: 250px;position: relative;">
+                            <div id="buy_drink">
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink5.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">1$</h2>
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink5()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink5">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink5()">+</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <br><br>
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink6.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">1$</h2>
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink6()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink6">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink6()">+</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink7.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">1$</h2>
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink7()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink7">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink7()">+</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div style="display: flex;">
+                                    <img src="image/pizza/drink8.png" style="width: 100px;height: 100px;">
+                                    <div>
+                                        <h2 style="color: white;">1$</h2>
+                                        
+                                        <div style="display: flex;width: max-content;margin: auto;">
+                                            <button onclick="minus_drink8()">-</button>
+                                            <div class="drink_num">
+                                                <h3 id="num_drink8">0</h3>
+                                            </div>
+                                            <button onclick="plus_drink8()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="paymoney" style=" width: 42.5%;">
+                    <h1>List items:</h1>
+                    <div style="display: flex;">
+                        <h2 id="pro" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_a" style="color: white"></h2>
+                    </div>
+                    <div style="height: 200px;">
+                        <h2 id="pro_d1" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_d2" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_d3" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_d4" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_d5" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_d6" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_d7" style="color: white;margin-left: 20px;"></h2>
+                        <h2 id="pro_d8" style="color: white;margin-left: 20px;"></h2>
+                    </div>
+                       
+                    <div class="total_price" style="display: flex; margin-top: 200px;margin-left: 30px;">
+                        <h1>Total Price: </h1>
+                        <h1 id="price"></h1>
+                        <h1>$</h1>
+                    </div>
+                    <a href="index.html"><button style="text-align: center; width: 100px;height: 50px; background-color: rgb(255, 255, 255);color: rgb(0, 0, 0); font-size: 20px;margin-left: 40%; border-radius: 5px;">Pay Now</button></a>
+                </div>
+            </div>
+            <h1 id="zz" style="display: none;"></h1>
+        </div>
+    </div>
+    <div id="loading"  style=" position: absolute;left: 50%; top: 50%;transform: translate(-50%,-50%);">
+        <img src="https://www.pizzahutdeliveryni.com/order_onlinev5_6/loading.gif">
+    </div>
+    
+    <script>
+        document.getElementById("loading").style.display="none";
+        function plus(){
+            var c= document.getElementById("price").innerHTML;
+            var b= document.getElementById("zz").innerHTML;
+            var a= document.getElementById("N").innerHTML;
+            var total = parseFloat(a)+1;
+            var price = parseFloat(b)+parseFloat(c);
+            document.getElementById("N").innerHTML=total;
+            document.getElementById("price").innerHTML=price.toFixed(2);
+            document.getElementById("pro_a").innerHTML="(x"+total+")";
+        }
+        function minus(){
+            var c= document.getElementById("price").innerHTML;
+            var b= document.getElementById("zz").innerHTML;
+            var a= document.getElementById("N").innerHTML;
+            if(a>=2){
+                var total = parseFloat(a)-1;
+                document.getElementById("N").innerHTML=total;
+                var price = parseFloat(c)-parseFloat(b);
+                document.getElementById("N").innerHTML=total;
+                document.getElementById("price").innerHTML=price.toFixed(2);
+                document.getElementById("pro_a").innerHTML="(x"+total+")";
+            }
+            
+        }
+        var time =3;
+        function piz1(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz1,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza1.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Pepperoni Pizza";
+                document.getElementById("price").innerHTML=10.00.toFixed(2);
+                document.getElementById("zz").innerHTML=10;
+                document.getElementById("pro").innerHTML="+ Pepperoni Pizza";
+            }
+            
+        }
+        function piz2(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz2,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza2.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Chicken BBQ Pizza";
+                document.getElementById("price").innerHTML=15.99;
+                document.getElementById("zz").innerHTML=15.99;
+                document.getElementById("pro").innerHTML="+ Chicken BBQ Pizza";
+            }
+           
+            
+        }
+        function piz3(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz3,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza3.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Cheese Pizza";
+                document.getElementById("price").innerHTML=17.81;
+                document.getElementById("zz").innerHTML=17.81;
+                document.getElementById("pro").innerHTML="+ Cheese Pizza";
+            }
+           
+        }
+        function piz4(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz4,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza4.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Mellow Mushroom Pizza";
+                document.getElementById("price").innerHTML=24.99;
+                document.getElementById("zz").innerHTML=24.99;
+                document.getElementById("pro").innerHTML="+ Mellow Mushroom Pizza";
+            }
+            
+        }
+        function piz5(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz5,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza5.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Vegetarina Pizza";
+                document.getElementById("price").innerHTML=8.12;
+                document.getElementById("zz").innerHTML=8.12;
+                document.getElementById("pro").innerHTML="+ Vegetarina Pizza";
+            }
+           
+        }
+        function piz6(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz6,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza6.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Seafood Pizza";
+                document.getElementById("price").innerHTML=7.10.toFixed(2);
+                document.getElementById("zz").innerHTML=7.10;
+                document.getElementById("pro").innerHTML="+ Seafood Pizza";
+            }
+            
+        }
+        function piz7(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz7,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza7.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Chicken Tikka Pizza";
+                document.getElementById("price").innerHTML=16.00.toFixed(2);
+                document.getElementById("zz").innerHTML=16;
+                document.getElementById("pro").innerHTML="+ Chicken Tikka Pizza";
+            }
+           
+        }
+        function piz8(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz8,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza8.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Cheese Sausage Pizza";
+                document.getElementById("price").innerHTML=18.90.toFixed(2);
+                document.getElementById("zz").innerHTML=18.9;
+                document.getElementById("pro").innerHTML="+ Cheese Sausage Pizza";
+            }
+            
+        }
+        function piz9(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz9,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza9.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Hawaiian Pizza";
+                document.getElementById("price").innerHTML=14.99.toFixed(2);
+                document.getElementById("zz").innerHTML=14.99;
+                document.getElementById("pro").innerHTML="+ Hawaiian Pizza";
+            }
+           
+        }
+        function piz10(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz10,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza10.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Margherita Pizza";
+                document.getElementById("price").innerHTML=13.34.toFixed(2);
+                document.getElementById("zz").innerHTML=13.34;
+                document.getElementById("pro").innerHTML="+ Margherita Pizza";
+            }
+            
+        }
+        function piz11(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz11,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza11.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Mushroom Pizza";
+                document.getElementById("price").innerHTML=15.00.toFixed(2);
+                document.getElementById("zz").innerHTML=15.00;
+                document.getElementById("yy").innerHTML=15.00;
+                document.getElementById("pro").innerHTML="+ Mushroom Pizza";
+            }
+          
+        }
+        function piz12(){
+            if(time>=0){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                time--;
+                setTimeout(piz12,1000);
+            }else{
+                document.getElementById("pizza_shop").style.display="inline";
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pic_order").src="image/pizza/pizza12.png";
+                document.getElementById("shop").style.display="none";
+                document.getElementById("pay").style.display="block";
+                document.getElementById("pizza_name").innerHTML="Spicy Mexican Pizza";
+                document.getElementById("price").innerHTML=5.99.toFixed(2);
+                document.getElementById("zz").innerHTML=5.99;
+                document.getElementById("pro").innerHTML="+ Spicy Mexican Pizza";
+            }
+            
+        }
+        var second = 3;
+        function search_bt(){
+            var search= document.getElementById("search").value;
+            document.getElementById("search").value="";
+            var new_search=search.toLowerCase();
+            //  var i =0;
+                if(new_search=="pepperoni pizza"){
+                    i=1;
+                    document.getElementById("pic_order").src="image/pizza/pizza1.png";
+                    document.getElementById("pizza_name").innerHTML="Pepperoni Pizza";
+                    document.getElementById("price").innerHTML=10.00.toFixed(2);
+                    document.getElementById("zz").innerHTML=10;
+                    document.getElementById("pro").innerHTML="+ Pepperoni Pizza";
+                }else if(new_search=="chicken bbq pizza"){
+                    i=1;
+                    document.getElementById("pic_order").src="image/pizza/pizza2.png";
+                    document.getElementById("pizza_name").innerHTML="Chicken BBQ Pizza";
+                    document.getElementById("price").innerHTML=15.99;
+                    document.getElementById("zz").innerHTML=15.99;
+                    document.getElementById("pro").innerHTML="+ Chicken BBQ Pizza";
+                }else if(new_search=="cheese pizza"){
+                    i=1;
+                    document.getElementById("pic_order").src="image/pizza/pizza3.png";
+                    document.getElementById("pizza_name").innerHTML="Cheese Pizza";
+                    document.getElementById("price").innerHTML=17.81;
+                    document.getElementById("zz").innerHTML=17.81;
+                    document.getElementById("pro").innerHTML="+ Cheese Pizza";
+                }else if(new_search=="mellow mushroom pizza"){
+                    i=1;
+                    document.getElementById("pic_order").src="image/pizza/pizza4.png";
+                    document.getElementById("pizza_name").innerHTML="Mellow Mushroom Pizza";
+                    document.getElementById("price").innerHTML=24.99;
+                    document.getElementById("zz").innerHTML=24.99;
+                    document.getElementById("pro").innerHTML="+ Mellow Mushroom Pizz";
+                }else if(new_search=="vegetarina pizza"){
+                    i=1;
+                    document.getElementById("pic_order").src="image/pizza/pizza5.png";
+                    document.getElementById("pizza_name").innerHTML="Vegetarina Pizza";
+                    document.getElementById("price").innerHTML=8.12;
+                    document.getElementById("zz").innerHTML=8.12;
+                    document.getElementById("pro").innerHTML="+ Vegetarina Pizza";
+                }else if(new_search=="seafood pizza"){
+                    i=1;
+                    document.getElementById("pic_order").src="image/pizza/pizza6.png";
+                    document.getElementById("pizza_name").innerHTML="Seafood Pizza";
+                    document.getElementById("price").innerHTML=7.10.toFixed(2);
+                    document.getElementById("zz").innerHTML=7.10;
+                    document.getElementById("pro").innerHTML="+ Seafood Pizza";
+                }else if(new_search=="chicken tikka pizza"){
+                    i =1;
+                    document.getElementById("pic_order").src="image/pizza/pizza7.png";
+                    document.getElementById("pizza_name").innerHTML="Chicken Tikka Pizza";
+                    document.getElementById("price").innerHTML=16.00.toFixed(2);
+                    document.getElementById("zz").innerHTML=16;
+                    document.getElementById("pro").innerHTML="+ Chicken Tikka Pizza";
+                }else if(new_search=="cheese sausage pizza"){
+                    i=1;
+                    document.getElementById("pic_order").src="image/pizza/pizza8.png";
+                    document.getElementById("pizza_name").innerHTML="Cheese Sausage Pizza";
+                    document.getElementById("price").innerHTML=18.90.toFixed(2);
+                    document.getElementById("zz").innerHTML=18.9;
+                    document.getElementById("pro").innerHTML="+ Cheese Sausage Pizza";
+                }
+            if(second>=1){
+                document.getElementById("loading").style.display="inline";
+                document.getElementById("pizza_shop").style.display="none";
+                second--;
+            }
+            if(second<=0){
+                document.getElementById("loading").style.display="none";
+                document.getElementById("pizza_shop").style.display="block";  
+                if(i==0){
+                    document.getElementById("shop").style.display="block";
+                    document.getElementById("pay").style.display="none";
+                }else if(i==1){
+                    document.getElementById("shop").style.display="none";
+                    document.getElementById("pay").style.display="block";
+                }
+                
+            }
+                  setTimeout(search_bt,1000);
+        
+        }
+        function plus_drink1(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink1").innerHTML);
+            document.getElementById("num_drink1").innerHTML=num+1;
+            document.getElementById("pro_d1").innerHTML="+ Coca-Cola ( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+1.5).toFixed(2);
+        }
+        function minus_drink1(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink1").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink1").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-1.5).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_d1").innerHTML="+ Coca-Cola ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_d1").innerHTML="";
+                }
+                
+            }
+        } 
+
+        function plus_drink2(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink2").innerHTML);
+            document.getElementById("num_drink2").innerHTML=num+1;
+            document.getElementById("pro_d2").innerHTML="+ Pepsi ( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+1).toFixed(2);
+        }
+        function minus_drink2(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink2").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink2").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-1).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_d2").innerHTML="+ Pepsi ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_d2").innerHTML="";
+                }
+            }
+        } 
+
+        function plus_drink3(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink3").innerHTML);
+            document.getElementById("num_drink3").innerHTML=num+1;
+            document.getElementById("pro_d3").innerHTML="+ Water ( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+0.5).toFixed(2);
+        }
+        function minus_drink3(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink3").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink3").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-0.5).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_d3").innerHTML="+ Bottle of Water ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_d3").innerHTML="";
+                }
+            }
+        } 
+
+        function plus_drink4(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink4").innerHTML);
+            document.getElementById("num_drink4").innerHTML=num+1;
+            document.getElementById("pro_d4").innerHTML="+ Fanta ( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+1).toFixed(2);
+        }
+        function minus_drink4(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink4").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink4").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-1).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_d4").innerHTML="+ Fanta ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_d4").innerHTML="";
+                }
+            }
+        } 
+
+        function plus_drink5(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink5").innerHTML);
+            document.getElementById("num_drink5").innerHTML=num+1;
+            document.getElementById("pro_d5").innerHTML="+ Sting( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+1).toFixed(2);
+        }
+        function minus_drink5(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink5").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink5").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-1).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_d5").innerHTML="+ Sting ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_d5").innerHTML="";
+                }
+            }
+        } 
+        
+        function plus_drink6(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink6").innerHTML);
+            document.getElementById("num_drink6").innerHTML=num+1;
+            document.getElementById("pro_d6").innerHTML="+ Sprite ( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+1).toFixed(2);
+        }
+        function minus_drink6(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink6").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink6").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-1).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_d6").innerHTML="+ Sprite ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_d6").innerHTML="";
+                }
+            }
+        } 
+        
+        function plus_drink7(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink7").innerHTML);
+            document.getElementById("num_drink7").innerHTML=num+1;
+            document.getElementById("pro_d7").innerHTML="+ Vigor ( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+1).toFixed(2);
+        }
+        function minus_drink7(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink7").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink7").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-1).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_dz").innerHTML="+ Vigor ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_dz").innerHTML="";
+                }
+            }
+        } 
+        
+        function plus_drink8(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink8").innerHTML);
+            document.getElementById("num_drink8").innerHTML=num+1;
+            document.getElementById("pro_d8").innerHTML="+ Ize   ( x"+(num+1)+" )";
+            document.getElementById("price").innerHTML=(money+1).toFixed(2);
+        }
+        function minus_drink8(){
+            var money=parseFloat(document.getElementById("price").innerHTML);
+            var num=parseFloat(document.getElementById("num_drink8").innerHTML);
+            if(num>=1){
+                document.getElementById("num_drink8").innerHTML=num-1;
+                document.getElementById("price").innerHTML=(money-1).toFixed(2);
+                if(num>1){
+                    document.getElementById("pro_d8").innerHTML="+ Ize ( x"+(num-1)+" )";
+                }else{
+                    document.getElementById("pro_d8").innerHTML="";
+                }
+            }
+        } 
+       
+    </script>
+</body>
+</html>

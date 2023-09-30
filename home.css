@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+}
+.home_section{
+    height: 136vh;
+    background-image: url("https://img.freepik.com/premium-photo/one-piece-pizza-pepperoni-with-mozzarella-black-surface_215497-334.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 85px;
+}
+marquee{
+    position: absolute;
+    top: 30px;
+    margin: 0 10%;
+}
+marquee img{
+    width: 60px;
+}
+hr{
+    margin: auto;
+    width: 80%;
+    height: 5px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    justify-content: space-between;
+    
+}
+.menu,.search{
+    z-index: 4;
+}
+.box{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 136vh;
+    z-index: 2;
+    background-color: rgba(180, 172, 172, 0.2);
+}
+img.pic {
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top:60%;
+    z-index: 1;
+    transform: translate(-50%,-40%);
+    animation: pic 3s infinite;
+}
+
+@keyframes pic{
+    0%{
+        margin:0;
+    }
+    50%{
+        margin-top: 30px;
+    }
+    100%{
+        margin: 0;
+    }
+}
+.logo{
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    z-index: 100;
+    width: max-content;
+}
+.logo img{
+    width: 80px;
+}
+.menu{
+    line-height: 60px;
+    width: 30%;
+}
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+}
+.menu ul li{
+    list-style: none;
+}
+.menu ul li a{
+    font-size: 30px;
+}
+/* .menu ul li:hover a{
+    color:aqua;
+    font-size: 35px;
+    transition: all 1s;
+} */
+.order{
+    text-align: center;
+    z-index: 3;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    cursor: pointer;
+    transform: translate(-50%,-10%);
+}
+html{
+    scroll-behavior: smooth;
+}
+.home_text{
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    text-align: center;
+    font-size: 45px;
+    transform: translate(-50%,-35%);
+    z-index: 4;
+}
+.order i{
+    color: black;
+}
+.order h1{
+    color: black;
+}
+.order:hover{
+    background-color: rgb(0, 0, 0);
+}
+.order:hover i{
+    color: white;
+}
+.order:hover h1{
+    color: white;
+}
+.right{
+    width: 30%;
+    z-index: 5;
+    display: flex;
+}
+.search{
+    display: flex;
+}
+.search input{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 200px;
+    height: 35px;
+    border: 3px solid black;
+    outline: none;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.search i{
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 3px solid black;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+}
+.account{
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+    line-height: 40px;
+    font-size: 25px;
+}
+.section_body{
+    background-color: white;
+    height: 45vh;
+}
+.show_food{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 115vh;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%);
+}
+#box{
+    margin: 10px;
+}
+#box h1,h2{
+    position: absolute;
+    margin: 15px 0 0 35px;
+    color: white;
+}
+#box img{
+    width: 440px;
+    height: 350px;
+    margin-left: -50px;
+    margin-top: -35px;
+    position: absolute;
+}
+
+.buy1{
+    position: absolute;
+    margin: 130px 0 0 35px;
+    border: 3px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+}
+.buy1:hover{
+    color: white;
+    border: 3px solid black;
+    background-color: black;
+}
+
+.box1,.box2,.box3{
+    position: relative;
+    z-index: 10;
+    width: 360px;
+    height: 270px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.box1:hover img,.box2:hover img,.box3:hover img{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+#boxs img{
+    width: 50px;
+    margin: 20px 0 0 10px;
+    position: relative;
+}
+.aa{
+    display: flex;
+    position: absolute;
+    top:160vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+#boxs{
+    display: flex;
+    border: 3px solid black;
+    width: 360px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.boxs1 h1{
+    text-align: center;
+}
+#boxs .b h1{
+    color: black;
+}
+#boxs h2{
+    color: rgb(105, 98, 98);
+    font-size: 15px;
+    margin-left:10px;
+}
+.section3{
+    height: 175vh;
+}
+.section3 h1{
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+.food_menu h1,h2{
+    position: relative;
+    color: black;
+}
+.food_menu img{
+    width: 170px;
+}
+.price {
+    color: red;
+}
+.first{
+    display: flex;
+}
+.buyy h2{
+    margin-left: 0;
+}
+.buyy{
+    margin: 0;
+    text-align: center;
+    border: 3px solid black;
+    width: 80%;
+    line-height: 5px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.pizza h2{
+    margin-left: 0;
+}
+.pizza{
+    margin-top: 20px;
+    margin: 20px;
+    text-align: center;
+    width: 280px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.pizza:hover img{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+.pizza:hover .buyy{
+    background-color: black;
+}
+.pizza:hover .buyy h2{
+    color: white;
+}
+.first{
+    width: max-content;
+    margin: 0 auto;
+}
+.abc{
+    background-image: url("https://media.istockphoto.com/id/886532840/vector/vector-seamless-pattern-with-linear-icons-and-illustrations-related-to-bakery-cafe-cupcake.jpg?s=612x612&w=0&k=20&c=mqI9bkmZOgynz2EEr_aCNCGWxdfCv8j7FTawTdkB4RU=");
+    background-attachment: fixed;
+}
+.abc{
+    margin-top: 970px;
+    padding: 20px;
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+}
+.image img{
+    width: 500px;
+    position: absolute;
+    left: 60%;
+    top:490vh;
+}
+.drink .pizza:hover img{
+    transform: scale(1.1);
+    rotate: 30deg;
+    transition: all 1s;
+}
+.pic{
+    margin-top: 30px;
+    position: absolute;
+    left: -30px;
+}
+.pic img{
+    width: 600px;
+    animation: piz 20s infinite;
+}
+.section4{
+    height: 100vh;
+    display: flex;
+}
+@keyframes piz{
+    0%{
+        rotate: 360deg;
+    }
+    50%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.talk h1{
+    color: black;
+    font-size: 50px;
+    margin-top: 80px;
+    margin-left: 600px;
+}
+.talk h2{
+    color: rgb(58, 52, 52);
+    margin-left: 600px;
+}
+.advantage{
+    margin-left: 600px;
+}
+.advantage .a1 img{
+    width: 50px;
+}
+.advantage h3{
+    font-size: 30px;
+    color: black;
+}
+.a1{
+    display: flex;
+    line-height: 50px;
+}
+.cooker{
+    height: 90vh;
+}
+.cooker h1{
+    color: black;
+    text-align: center;
+    font-size: 50px;
+}
+.social i{
+    font-size: 30px;
+    color: black;
+    justify-content: space-between;
+}
+.chefs{
+    display: flex;
+    width: max-content;
+    margin: auto;
+}
+.chef1{
+    margin: 10px;
+    padding-top: 10px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+.footer{
+    background-image: url("https://media.istockphoto.com/id/1412198876/vector/ingredients-pizza-thin-line-seamless-pattern-background-vector.jpg?s=612x612&w=0&k=20&c=7GO0fHbK_t1Hy03sLHkBX1uqLrUfHQRq0H-qlNij6Uk=");
+    background-attachment: fixed;
+    /* background-position: center;
+    background-size: cover; */
+    height: 100vh;
+    
+}
+.blur{
+    background-color: rgb(0, 0, 0,0.85);
+    width: 100%;
+    height: 100%;
+}
+
+.left1 img{
+    margin: 30px;
+    width: 150px;
+}
+#buy_drink button{
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+}
+.drink_num{
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 2px solid white;
+}
